@@ -19,7 +19,7 @@ A cyberpunk-themed quiz application specifically designed to test Computer Scien
 
 1.  Clone this repository:
     ```bash
-    git clone [https://github.com/](https://github.com/)[your-username]/dev-trivia.git
+    git clone git clone https://github.com/akshaya209/dev-trivia.git
     ```
 2.  Open the folder.
 3.  Launch `index.html` in your browser.
@@ -31,4 +31,4 @@ A cyberpunk-themed quiz application specifically designed to test Computer Scien
 
 ## 👤 Author
 
-Developed by [Your Name]
+Developed by Akshaya
