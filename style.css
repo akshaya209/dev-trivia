@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+  --background-color: #0d1117; /* Github Dark Dim */
+  --card-color: #161b22;
+  --text-color: #c9d1d9;
+  --primary-color: #00ff9d; /* Neon Green */
+  --secondary-color: #ff0055; /* Neon Red */
+  --accent-color: #58a6ff; /* Blue */
+  --font-main: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  background-image: radial-gradient(#21262d 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Typography */
+h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+.subtitle {
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Custom Buttons */
+.btn {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  width: 22rem;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  background: transparent;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px var(--primary-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--primary-color);
+  background-color: rgba(0, 255, 157, 0.1);
+}
+
+.btn:disabled:hover {
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Forms */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    text-align: center;
+    outline: none;
+}
+
+input::placeholder {
+    color: #484f58;
+}
+
+/* HUD */
+#hud {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem; 
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+.hud-main-text {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+  text-shadow: none;
+}
+
+#progressBar {
+  width: 15rem;
+  height: 10px;
+  border: 2px solid var(--text-color);
+  margin-top: 1rem;
+}
+
+#progressBarFull {
+  height: 100%;
+  background-color: var(--primary-color);
+  width: 0%;
+}
+
+/* Choice Cards */
+.choice-container {
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  font-size: 1.5rem;
+  border: 1px solid #30363d;
+  background-color: var(--card-color);
+  transition: transform 0.2s;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  border-color: var(--accent-color);
+  transform: translateX(-5px);
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: #21262d;
+  color: var(--text-color);
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+/* Validation Classes */
+.correct {
+  border-color: var(--primary-color) !important;
+  background-color: rgba(0, 255, 157, 0.1) !important;
+}
+
+.incorrect {
+  border-color: var(--secondary-color) !important;
+  background-color: rgba(255, 0, 85, 0.1) !important;
+}
+
+/* Loader */
+#loader {
+  border: 0.5rem solid #21262d;
+  border-radius: 50%;
+  border-top: 0.5rem solid var(--primary-color);
+  width: 5rem;
+  height: 5rem;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Leaderboard List */
+#highScoresList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.high-score {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #30363d;
+}
